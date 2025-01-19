@@ -1,0 +1,20 @@
+.company-info img{
+    margin-top: 12px;
+    cursor: pointer;
+    width: 200px;
+  }
+  
+  .company-info p{
+    width: 320px;
+  }
+  footer section{
+    padding: 10px 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  @media screen and (max-width: 768px){
+    .company-info p{
+        width: 100%;
+    }
+  }
