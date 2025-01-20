@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Main from './components/Main';
+import BookingForm from './components/BookingForm';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
 function App() {
@@ -12,6 +12,7 @@ function App() {
       <Router>
         <Nav/>
         <Header/> 
+        <BookingForm/>
         <Menu/>
         <Footer/>
       </Router>
