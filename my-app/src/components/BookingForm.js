@@ -1,21 +1,21 @@
 import React,{useState} from "react";
-function BookingForm() {
+import "../styles/Booking.css";
+const BookingForm = (props) => {
     const [date, setDate] = useState("");
     const [times, setTimes] = useState("");
     const [guest, setGuest] = useState("");
     const [occasion, setOccasion] = useState("");
     const handleSubmit = (e) => {
-        e.preventDefault();
         
     }
     const handleChange = (e) => {
-        setDate(e.target.value);
-  
+        setDate(e);
+        props.dispatch(e);
     }
     return(
         <header>
-            <section className="">
-                <form onSubmit={handleSubmit}>
+            <section>
+                <form  onSubmit={handleSubmit} className="form" >
                     <fieldset>
                         <div>
                             <label htmlFor="book-date">Choose Date</label>
@@ -25,7 +25,9 @@ function BookingForm() {
                             <label htmlFor="book-time">Choose Time</label>
                             <select id="book-time" value={times} onChange={(e) => setTimes(e.target.value)} required>
                                 <option value="">Select a Time</option>
-                            
+                                {
+                                    props.availableTimes.availableTimes.map(availableTimes =>{return  <option key={availableTimes}>{availableTimes}</option>})                                     
+                                }
                             </select>
                         </div>
                         <div>
@@ -43,7 +45,7 @@ function BookingForm() {
                             </select>
                         </div>
                         <div>
-                            <input aria-label="On Click" type="submit" value={"Make Your Reservation"} />
+                            <input aria-label="On Click" type="submit" className="formbtn" value={"Make Your Reservation"} />
                         </div>
                     </fieldset>
                 </form>

@@ -1,0 +1,41 @@
+
+@media screen and (max-width: 768px){
+    .header section{
+        padding: 10px 8%;
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formbtn {
+    padding: 5px 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #F4CE14;
+    color: black;
+    border: none;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}

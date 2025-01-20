@@ -1,18 +1,16 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Header from './components/Header';
 import Nav from './components/Nav';
-import BookingForm from './components/BookingForm';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
+import Main from './components/Main';
 function App() {
   return (
     <>
       <Router>
         <Nav/>
-        <Header/> 
-        <BookingForm/>
+        <Main/>
         <Menu/>
         <Footer/>
       </Router>
